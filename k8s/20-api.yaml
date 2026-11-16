@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+  namespace: catalog
+spec:
+  replicas: 1          # se modifica con: kubectl -n catalog scale deploy/api --replicas=N
+  selector:
+    matchLabels: {app: api}
+  template:
+    metadata:
+      labels: {app: api}
+    spec:
+      # Reparte las réplicas entre los nodos disponibles (relevante en 2 y 3 nodos)
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels: {app: api}
+      containers:
+        - name: api
+          image: catalog-api:latest
+          imagePullPolicy: IfNotPresent   # imagen importada/subida a un registry accesible por los nodos
+          ports:
+            - containerPort: 8000
+          env:
+            - {name: DB_HOST, value: db}
+            - {name: DB_NAME, value: catalog}
+            - {name: DB_USER, value: catalog}
+            - {name: DB_PASSWORD, value: catalog}
+            - {name: DB_POOL_MAX, value: "10"}
+          resources:
+            requests: {cpu: "250m", memory: 128Mi}
+            limits: {cpu: "500m", memory: 256Mi}
+          readinessProbe:
+            httpGet: {path: /health, port: 8000}
+            initialDelaySeconds: 3
+            periodSeconds: 3
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api
+  namespace: catalog
+spec:
+  type: NodePort
+  selector: {app: api}
+  ports:
+    - port: 8000
+      targetPort: 8000
+      nodePort: 30080

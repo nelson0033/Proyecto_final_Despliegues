@@ -1,0 +1,54 @@
+# La ConfigMap "db-init" se crea desde db/init.sql con deploy.sh:
+#   kubectl -n catalog create configmap db-init --from-file=init.sql=db/init.sql
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  namespace: catalog
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels: {app: db}
+  template:
+    metadata:
+      labels: {app: db}
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          ports:
+            - containerPort: 5432
+          env:
+            - {name: POSTGRES_DB, value: catalog}
+            - {name: POSTGRES_USER, value: catalog}
+            - {name: POSTGRES_PASSWORD, value: catalog}
+          resources:
+            requests: {cpu: "500m", memory: 512Mi}
+            limits: {cpu: "2", memory: 1Gi}
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "catalog", "-d", "catalog"]
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          volumeMounts:
+            - {name: init, mountPath: /docker-entrypoint-initdb.d}
+            - {name: data, mountPath: /var/lib/postgresql/data}
+      volumes:
+        - name: init
+          configMap:
+            name: db-init
+        - name: data
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  namespace: catalog
+spec:
+  selector: {app: db}
+  ports:
+    - port: 5432
+      targetPort: 5432
