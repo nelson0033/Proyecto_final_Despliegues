@@ -11,6 +11,9 @@ spec:
     metadata:
       labels: {app: api}
     spec:
+      # Evita que Kubernetes inyecte variables como DB_PORT=tcp://10.43.x.x:5432
+      # (por existir un Service llamado "db"), que chocan con las de la aplicación.
+      enableServiceLinks: false
       # Reparte las réplicas entre los nodos disponibles (relevante en 2 y 3 nodos)
       topologySpreadConstraints:
         - maxSkew: 1
@@ -26,6 +29,7 @@ spec:
             - containerPort: 8000
           env:
             - {name: DB_HOST, value: db}
+            - {name: DB_PORT, value: "5432"}
             - {name: DB_NAME, value: catalog}
             - {name: DB_USER, value: catalog}
             - {name: DB_PASSWORD, value: catalog}
