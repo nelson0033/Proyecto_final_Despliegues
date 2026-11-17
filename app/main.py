@@ -11,6 +11,7 @@ Endpoints pensados para generar carga variada:
 """
 import os
 import random
+import threading
 from contextlib import contextmanager
 
 from fastapi import FastAPI, HTTPException, Query
@@ -27,34 +28,44 @@ POOL_MAX = int(os.getenv("DB_POOL_MAX", "10"))
 
 app = FastAPI(title="Catalog API")
 _pool = None
+_pool_lock = threading.Lock()
+# ThreadedConnectionPool lanza PoolError (HTTP 500) si se agotan las conexiones.
+# El semáforo hace que las peticiones esperen su turno en vez de fallar.
+_slots = threading.BoundedSemaphore(POOL_MAX)
 
 
 def get_pool():
     global _pool
     if _pool is None:
-        _pool = ThreadedConnectionPool(
-            1, POOL_MAX, host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
-            user=DB_USER, password=DB_PASSWORD,
-        )
+        with _pool_lock:
+            if _pool is None:
+                _pool = ThreadedConnectionPool(
+                    1, POOL_MAX, host=DB_HOST, port=DB_PORT, dbname=DB_NAME,
+                    user=DB_USER, password=DB_PASSWORD,
+                )
     return _pool
 
 
 @contextmanager
 def cursor(commit=False):
     pool = get_pool()
-    conn = pool.getconn()
+    _slots.acquire()
     try:
-        with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            yield cur
-        if commit:
-            conn.commit()
-        else:
+        conn = pool.getconn()
+        try:
+            with conn.cursor(cursor_factory=RealDictCursor) as cur:
+                yield cur
+            if commit:
+                conn.commit()
+            else:
+                conn.rollback()
+        except Exception:
             conn.rollback()
-    except Exception:
-        conn.rollback()
-        raise
+            raise
+        finally:
+            pool.putconn(conn)
     finally:
-        pool.putconn(conn)
+        _slots.release()
 
 
 class ProductIn(BaseModel):
