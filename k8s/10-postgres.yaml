@@ -15,12 +15,19 @@ spec:
     metadata:
       labels: {app: db}
     spec:
+      # Se ejecuta directamente como el usuario "postgres" de la imagen alpine (uid 70).
+      # Así el entrypoint no usa gosu (que se quedaba al 100% de CPU en algunos kernels).
+      securityContext:
+        runAsUser: 70
+        runAsGroup: 70
+        fsGroup: 70
       containers:
         - name: postgres
           image: postgres:16-alpine
           ports:
             - containerPort: 5432
           env:
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
             - {name: POSTGRES_DB, value: catalog}
             - {name: POSTGRES_USER, value: catalog}
             - {name: POSTGRES_PASSWORD, value: catalog}
