@@ -21,6 +21,10 @@ spec:
         runAsUser: 70
         runAsGroup: 70
         fsGroup: 70
+        # Ubuntu 26.04: el perfil AppArmor por defecto de containerd bloquea las señales
+        # entre procesos de PostgreSQL (DENIED operation="signal") y la base de datos entra en bucle.
+        appArmorProfile:
+          type: Unconfined
       containers:
         - name: postgres
           image: postgres:16-alpine
@@ -35,10 +39,11 @@ spec:
             requests: {cpu: "500m", memory: 512Mi}
             limits: {cpu: "2", memory: 1Gi}
           readinessProbe:
-            exec:
-              command: ["pg_isready", "-U", "catalog", "-d", "catalog"]
+            tcpSocket:
+              port: 5432
             initialDelaySeconds: 5
             periodSeconds: 5
+            failureThreshold: 30
           volumeMounts:
             - {name: init, mountPath: /docker-entrypoint-initdb.d}
             - {name: data, mountPath: /var/lib/postgresql/data}
