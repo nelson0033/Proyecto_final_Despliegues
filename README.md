@@ -25,3 +25,13 @@ notebook/analisis_despliegues.ipynb
 4. Copia los `.jtl` a `results/` y abre el notebook (Jupyter o Colab); ejecútalo y completa las secciones de análisis, conclusiones y recomendaciones con tus datos.
 
 Variables útiles del script: `THREAD_LEVELS="10 50 100 200"`, `DURATION=90`, `RAMPUP=10`.
+
+## Nota (Plan B): PostgreSQL fuera de Kubernetes
+En Ubuntu 26.04 (kernel 7.0, K3s 1.37) AppArmor bloquea las señales entre procesos de PostgreSQL dentro del pod,
+y la base de datos entra en bucle (ver `k8s/alternativa/`). Por eso PostgreSQL corre en Docker en la VM A y solo la API
+se despliega en Kubernetes:
+```bash
+# VM A
+docker compose -f docker-compose.db.yml up -d
+DB_HOST=<IP_VM_A> KUBECTL="sudo k3s kubectl" bash k8s/deploy.sh 1
+```
