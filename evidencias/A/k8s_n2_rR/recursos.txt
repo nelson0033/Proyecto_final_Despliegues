@@ -1,0 +1,11 @@
+Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
+NAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api   3/3     3            3           2d
+
+NAME          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+service/api   NodePort    10.43.75.224   <none>        8000:30080/TCP   2d
+service/db    ClusterIP   10.43.251.5    <none>        5432/TCP         2d
+
+NAME            ENDPOINTS                                       AGE
+endpoints/api   10.42.0.31:8000,10.42.1.5:8000,10.42.3.3:8000   2d
+endpoints/db    192.168.1.8:5432                                2d

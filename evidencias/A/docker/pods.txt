@@ -1,0 +1,4 @@
+NAME                   READY   STATUS    RESTARTS   AGE   IP           NODE     NOMINATED NODE   READINESS GATES
+api-5445d84496-qkb54   1/1     Running   0          23m   10.42.0.28   nodo-a   <none>           <none>
+api-5445d84496-svqlh   1/1     Running   0          22m   10.42.0.29   nodo-a   <none>           <none>
+api-5445d84496-wlhdc   1/1     Running   0          24m   10.42.0.27   nodo-a   <none>           <none>

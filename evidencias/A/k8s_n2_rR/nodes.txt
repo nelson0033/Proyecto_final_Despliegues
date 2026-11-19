@@ -1,0 +1,4 @@
+NAME     STATUS   ROLES           AGE    VERSION        INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION             CONTAINER-RUNTIME
+nodo-a   Ready    control-plane   2d1h   v1.37.2+k3s1   192.168.1.8    <none>        Ubuntu 26.04.1 LTS   7.0.0-43-generic (amd64)   containerd://2.3.7-k3s1
+nodo-b   Ready    <none>          43m    v1.37.2+k3s1   192.168.1.11   <none>        Ubuntu 26.04.1 LTS   7.0.0-43-generic (amd64)   containerd://2.3.7-k3s1
+nodo-c   Ready    <none>          18m    v1.37.2+k3s1   192.168.1.10   <none>        Ubuntu 26.04.1 LTS   7.0.0-43-generic (amd64)   containerd://2.3.7-k3s1

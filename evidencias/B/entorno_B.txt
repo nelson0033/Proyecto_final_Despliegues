@@ -1,0 +1,10 @@
+nodo-b
+Description:	Ubuntu 26.04.1 LTS
+7.0.0-43-generic
+Model name:                              11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz
+2
+               total        used        free      shared  buff/cache   available
+Mem:           2,6Gi       434Mi       1,7Gi       1,1Mi       628Mi       2,2Gi
+Swap:          2,0Gi          0B       2,0Gi
+Docker version 29.10.0, build fdd4b8e
+sudo: 'k3s': command not found

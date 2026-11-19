@@ -1,0 +1,4 @@
+NAME                   CPU(cores)   MEMORY(bytes)   
+api-5445d84496-qkb54   2m           45Mi            
+api-5445d84496-svqlh   2m           46Mi            
+api-5445d84496-wlhdc   2m           45Mi            
