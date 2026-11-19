@@ -1,0 +1,5 @@
+jue 19 nov 2026 05:28:20 UTC
+ 05:28:20 up  3:35,  2 users,  load average: 6,73, 9,35, 8,89
+               total        used        free      shared  buff/cache   available
+Mem:           2,6Gi       1,3Gi       394Mi        24Mi       1,1Gi       1,3Gi
+Swap:          2,0Gi        93Mi       1,9Gi

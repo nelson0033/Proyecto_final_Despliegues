@@ -1,0 +1,2 @@
+NAME                  READY   STATUS    RESTARTS   AGE   IP           NODE     NOMINATED NODE   READINESS GATES
+api-7746946fc-5qgnb   1/1     Running   0          49m   10.42.0.31   nodo-a   <none>           <none>

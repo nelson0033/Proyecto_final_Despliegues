@@ -1,0 +1,164 @@
+bash: jmeter/run_experiment.sh: No such file or directory
+>> results/k8s_n3_r1_t10_rep1.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:13:58 UTC (1794896038263)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    121 in 00:00:02 =   74.1/s Avg:    13 Min:     4 Max:    47 Err:     0 (0.00%) Active: 2 Started: 2 Finished: 0
+summary +   2489 in 00:00:30 =   82.9/s Avg:   106 Min:     4 Max:   340 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary =   2610 in 00:00:32 =   82.5/s Avg:   102 Min:     4 Max:   340 Err:     0 (0.00%)
+summary +   2336 in 00:00:29 =   81.8/s Avg:   122 Min:    21 Max:   336 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+summary =   4946 in 00:01:00 =   82.1/s Avg:   111 Min:     4 Max:   340 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:14:58 UTC (1794896098587)
+... end of run
+>> results/k8s_n3_r1_t10_rep2.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:15:17 UTC (1794896117286)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1120 in 00:00:13 =   88.6/s Avg:    70 Min:     4 Max:   237 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary +   2536 in 00:00:30 =   84.5/s Avg:   118 Min:    22 Max:  1171 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary =   3656 in 00:00:43 =   85.8/s Avg:   103 Min:     4 Max:  1171 Err:     0 (0.00%)
+summary +   1564 in 00:00:17 =   89.4/s Avg:   112 Min:    19 Max:   250 Err:     0 (0.00%) Active: 0 Started: 10 Finished: 10
+summary =   5220 in 00:01:00 =   86.8/s Avg:   106 Min:     4 Max:  1171 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:16:17 UTC (1794896177519)
+... end of run
+>> results/k8s_n3_r1_t30_rep1.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:16:36 UTC (1794896196263)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   2223 in 00:00:24 =   94.0/s Avg:   248 Min:     4 Max:   982 Err:     0 (0.00%) Active: 30 Started: 30 Finished: 0
+summary +   2950 in 00:00:30 =   98.4/s Avg:   304 Min:     5 Max:  1104 Err:     0 (0.00%) Active: 30 Started: 30 Finished: 0
+summary =   5173 in 00:00:54 =   96.5/s Avg:   280 Min:     4 Max:  1104 Err:     0 (0.00%)
+summary +    684 in 00:00:07 =  101.5/s Avg:   299 Min:    38 Max:   832 Err:     0 (0.00%) Active: 0 Started: 30 Finished: 30
+summary =   5857 in 00:01:00 =   97.0/s Avg:   282 Min:     4 Max:  1104 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:17:36 UTC (1794896256746)
+... end of run
+>> results/k8s_n3_r1_t30_rep2.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:17:55 UTC (1794896275417)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    374 in 00:00:04 =   83.4/s Avg:    75 Min:     4 Max:   242 Err:     0 (0.00%) Active: 14 Started: 14 Finished: 0
+summary +   2944 in 00:00:30 =   98.1/s Avg:   288 Min:    39 Max:   928 Err:     0 (0.00%) Active: 30 Started: 30 Finished: 0
+summary =   3318 in 00:00:34 =   96.2/s Avg:   264 Min:     4 Max:   928 Err:     0 (0.00%)
+summary +   2516 in 00:00:26 =   97.1/s Avg:   309 Min:    43 Max:  1372 Err:     0 (0.00%) Active: 0 Started: 30 Finished: 30
+summary =   5834 in 00:01:00 =   96.6/s Avg:   283 Min:     4 Max:  1372 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:18:55 UTC (1794896335911)
+... end of run
+>> results/k8s_n3_r1_t60_rep1.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:19:14 UTC (1794896354317)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1436 in 00:00:16 =   92.1/s Avg:   425 Min:    10 Max:  1863 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+summary +   2810 in 00:00:30 =   93.7/s Avg:   638 Min:   203 Max:  1824 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+summary =   4246 in 00:00:46 =   93.1/s Avg:   566 Min:    10 Max:  1863 Err:     0 (0.00%)
+summary +   1373 in 00:00:15 =   91.0/s Avg:   664 Min:   207 Max:  2036 Err:     0 (0.00%) Active: 0 Started: 60 Finished: 60
+summary =   5619 in 00:01:01 =   92.6/s Avg:   590 Min:    10 Max:  2036 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:20:15 UTC (1794896415091)
+... end of run
+>> results/k8s_n3_r1_t60_rep2.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:20:34 UTC (1794896434038)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +      1 in 00:00:00 =    3.0/s Avg:    41 Min:    41 Max:    41 Err:     0 (0.00%) Active: 2 Started: 2 Finished: 0
+summary +   2468 in 00:00:26 =   96.5/s Avg:   499 Min:    13 Max:  1601 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+summary =   2469 in 00:00:26 =   95.2/s Avg:   498 Min:    13 Max:  1601 Err:     0 (0.00%)
+summary +   2621 in 00:00:30 =   87.5/s Avg:   684 Min:   222 Max:  2715 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+summary =   5090 in 00:00:56 =   91.1/s Avg:   594 Min:    13 Max:  2715 Err:     0 (0.00%)
+summary +    468 in 00:00:06 =   82.7/s Avg:   732 Min:   195 Max:  1818 Err:     0 (0.00%) Active: 0 Started: 60 Finished: 60
+summary =   5558 in 00:01:02 =   90.3/s Avg:   606 Min:    13 Max:  2715 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:21:35 UTC (1794896495667)
+... end of run
+>> results/k8s_n3_r1_t100_rep1.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:21:53 UTC (1794896513576)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    508 in 00:00:06 =   80.2/s Avg:   341 Min:     9 Max:  1161 Err:     0 (0.00%) Active: 63 Started: 63 Finished: 0
+summary +   2795 in 00:00:30 =   93.1/s Avg:  1037 Min:   349 Max:  2319 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+summary =   3303 in 00:00:36 =   90.8/s Avg:   930 Min:     9 Max:  2319 Err:     0 (0.00%)
+summary +   2299 in 00:00:25 =   92.4/s Avg:  1083 Min:   612 Max:  2212 Err:     0 (0.00%) Active: 0 Started: 100 Finished: 100
+summary =   5602 in 00:01:01 =   91.5/s Avg:   993 Min:     9 Max:  2319 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:22:54 UTC (1794896574930)
+... end of run
+>> results/k8s_n3_r1_t100_rep2.jtl
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARN StatusConsoleListener The use of package scanning to locate plugins is deprecated and will be removed in a future release
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider (file:/home/nelson/apache-jmeter-5.6.3/lib/xstream-1.4.20.jar)
+WARNING: Please consider reporting this to the maintainers of class com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+Creating summariser <summary>
+Created the tree successfully using jmeter/plan.jmx
+Starting standalone test @ 2026 Nov 17 06:23:12 UTC (1794896592983)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1566 in 00:00:17 =   92.5/s Avg:   723 Min:    16 Max:  1964 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+summary +   2747 in 00:00:30 =   91.6/s Avg:  1090 Min:   588 Max:  2474 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+summary =   4313 in 00:00:47 =   91.9/s Avg:   957 Min:    16 Max:  2474 Err:     0 (0.00%)
+summary +   1252 in 00:00:14 =   87.1/s Avg:  1154 Min:   682 Max:  2239 Err:     0 (0.00%) Active: 0 Started: 100 Finished: 100
+summary =   5565 in 00:01:01 =   90.8/s Avg:  1001 Min:    16 Max:  2474 Err:     0 (0.00%)
+Tidying up ...    @ 2026 Nov 17 06:24:14 UTC (1794896654380)
+... end of run
+Listo. Resultados en results/

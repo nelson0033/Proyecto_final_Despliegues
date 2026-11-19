@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE                COMMAND                  CREATED       STATUS                 PORTS                                         NAMES
+b0a7689180ca   postgres:16-alpine   "docker-entrypoint.s…"   3 hours ago   Up 3 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp   proyecto_final_despliegues-db-1

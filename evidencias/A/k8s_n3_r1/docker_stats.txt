@@ -1,0 +1,2 @@
+CONTAINER ID   NAME                              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O         BLOCK I/O         PIDS
+b0a7689180ca   proyecto_final_despliegues-db-1   5.49%     47.75MiB / 2.585GiB   1.80%     191MB / 490MB   85.4MB / 1.54GB   7

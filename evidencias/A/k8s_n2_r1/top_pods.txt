@@ -1,0 +1,2 @@
+NAME                   CPU(cores)   MEMORY(bytes)   
+api-86d5c9f7d5-qn6t8   2m           47Mi            

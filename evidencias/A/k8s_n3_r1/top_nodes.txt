@@ -1,0 +1,4 @@
+NAME     CPU(cores)   CPU(%)      MEMORY(bytes)   MEMORY(%)   
+nodo-a   72m          3%          1131Mi          42%         
+nodo-c   13m          0%          630Mi           23%         
+nodo-b   <unknown>    <unknown>   <unknown>       <unknown>   
